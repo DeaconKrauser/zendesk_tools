@@ -2,21 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!--   See Using Zendesk Garden:
-    https://developer.zendesk.com/apps/docs/developer-guide/setup#using-zendesk-garden
-    https://garden.zendesk.com/css-components/bedrock/
-    https://garden.zendesk.com/css-components/utilities/typography/
-   -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7.0.21,npm/@zendeskgarden/css-utilities@4.3.0">
 </head>
 <body>
-  <h2 class="u-semibold u-fs-xl">Primeiro APP Zendesk</h2>
+  <h1>Digite o CEP</h1>
+      <input type="text" id="cep" name="cep" size="15" maxlength="8" autocomplete="off">
+      <button type="submit" onclick="consultaCep()">Consultar</button>
+      <div style="padding-top:20px" id="return"></div>
+      <script src="main.js"></script>
   <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
   <script>
-    // Initialise Apps framework client. See also:
-    // https://developer.zendesk.com/apps/docs/developer-guide/getting_started
     var client = ZAFClient.init();
     client.invoke('resize', { width: '100%', height: '200px' });
   </script>
+  <script src="main.js"></script>
 </body>
 </html>
