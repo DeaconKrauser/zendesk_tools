@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>CEP</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,16 +10,37 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+      <div class="container">
 
-  <button type="submit" class="btn btn-primary" onclick="pegaTicketid()">Pegar id</button>
+      <!--PESQUISAR-->
+      <div class="mb-3">
+      <h1>Pesquise o jogo</h1>
+        <label class="form-label">Pesquise o jogo que deseja</label>
+        <input type="text" id="jogo" name="jogo" size="15" autocomplete="off" class="form-control">
+        <br>
+        <button type="submit" onclick="consultaCep()" class="btn btn-primary">Consultar</button>
+        <br>
+        <div style="padding-top:20px" id="return"></div>
+      </div>
 
-  <script>
-    function pegaTicketid() {
-      let url = window.location.href.replace('https://opsmagalu1611168218.zendesk.com/agent/tickets/', '')
-      console.log(url)
-    }
-  </script>
+      <!--CRIAR-->
+      <div class="mb-3">
+      <h1>Adicionar novo jogo</h1>
+        <label class="form-label">Nome</label>
+        <input type="text" id="nome" name="nome" size="15" autocomplete="on" class="form-control">
+        <br>
+        <label class="form-label">plataforma</label>
+        <input type="text" id="plataforma" name="plataforma" size="15" autocomplete="on" class="form-control">
+        <br>
+        <label class="form-label">preco</label>
+        <input type="text" id="preco" name="preco" size="15" autocomplete="on" class="form-control">
+        <br>
+        <button type="submit" class="btn btn-primary" id="btnAddGame">Criar</button>
+        <br>
+      </div>
       
+      </div>
+      <script src="main.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
